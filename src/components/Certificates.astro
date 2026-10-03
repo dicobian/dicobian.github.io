@@ -1,0 +1,33 @@
+---
+import Section from "./Section.astro";
+import { SITE_CONTENT } from "../config";
+
+const { certificates } = SITE_CONTENT;
+---
+
+<Section text="Certificate" href="certificate">
+  <div id="certificates" class="scroll-mt-24">
+    <h2 class="mb-8 text-2xl font-bold">Certificates</h2>
+
+    <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {
+        certificates.map((cert) => (
+          <li class="group relative aspect-[4/3] overflow-hidden rounded-xl">
+            <img
+              src={cert.image}
+              alt={cert.name}
+              loading="lazy"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <!-- lapisan gelap -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <!-- judul di pojok kiri bawah -->
+            <p class="absolute bottom-0 left-0 p-4 text-sm font-semibold text-white">
+              {cert.name}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Section>

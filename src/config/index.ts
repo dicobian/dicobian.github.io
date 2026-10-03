@@ -71,12 +71,38 @@ export const SITE_CONTENT: SiteContent = {
   projects: [
     {
       name: "Azzahra System",
-      summary: "ERP system for school, for maintain financial and student database",
-      stackTechnology: ["Laravel", "Filament", "Postgre SQL"],
+      summary: "ERP system for school, for maintain financial and student database.",
+      stackTechnology: ["PHP", "Laravel", "Filament", "Postgre SQL"],
       linkPreview: "/",
       linkSource: "",
       image: "/azzahra-system.png",
     },
+    {
+      name: "Task Management",
+      summary: "A web application designed for managing and monitoring staff tasks efficiently.",
+      stackTechnology: ["Python", "Javacript", "Next Js", "Fast Api", "Postgre SQL"],
+      linkPreview: "/",
+      linkSource: "",
+      image: "/task-management-app.png",
+    },
+  ],
+  certificates: [
+    {
+      name: "Office Excel 2016 Certificate",
+      image: "/certificates/excell.png"
+    },
+    {
+      name: "Bangkit Cloud Computing",
+      image: "/certificates/bangkit.png"
+    },
+    {
+      name: "Hackerank SQL intermediate",
+      image: "/certificates/sql.png"
+    },
+    {
+      name: "Basic Networking",
+      image: "/certificates/cisco-networking.png"
+    }
   ],
   about: {
     description: `
