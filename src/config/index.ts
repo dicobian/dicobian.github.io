@@ -1,24 +1,25 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Ahmad Habib - Web & Cloud",
+  title: "Ahmad Habib - Web & IT Support",
   author: "Ahmad Habib",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Web Developer & IT Support Specialist based in Jakarta, Indonesia. I specialize in Laravel web app development and IT support.",
   lang: "en",
   siteLogo: "/ahmad-small.png",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
+    { text: "Certificates", href: "#certificates" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/ahmad-habib-afif" },
+    { text: "Github", href: "https://github.com/dicobian" },
     
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://dicobian.github.io",
 };
 
 export const SITE_CONTENT: SiteContent = {
@@ -26,7 +27,7 @@ export const SITE_CONTENT: SiteContent = {
     name: "Ahmad Habib Afif",
     specialty: "Web Developer & IT Support",
     summary:
-      "Web Developer & IT Support Specialist based in Jakarta, Indonesia. I specialize in Laravel web app development and IT support.",
+      "Web Developer & IT Support Specialist based in Banten, Indonesia. I specialize in Laravel web app development and IT support.",
     email: "dirosah.ilmahdi@gmail.com",
   },
   experience: [
