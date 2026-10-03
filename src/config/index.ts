@@ -1,23 +1,21 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Ahmad Habib - Web & Cloud",
+  author: "Ahmad Habib",
   description:
     "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
   lang: "en",
-  siteLogo: "/alejandro-small.jpg",
+  siteLogo: "/ahmad-small.png",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
     { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
     { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    
   ],
   socialImage: "/zen-og.png",
   canonicalURL: "https://astro-zen.vercel.app",
@@ -25,73 +23,68 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Ahmad Habib Afif",
+    specialty: "Web Developer & IT Support",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Web Developer & IT Support Specialist based in Jakarta, Indonesia. I specialize in Laravel web app development and IT support.",
+    email: "dirosah.ilmahdi@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "Anaheim Nimbus Universal",
+      position: "QA Enggineer",
+      startDate: "April 2026",
+      endDate: "June 2026",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Cloud Migration Testing: Executed Factory User Testing (FUT) for a large-scale infrastructure migration from On-Premise servers to a Modern Cloud environment.",
+        "Data Integrity Validation: Validated downstream data flow to ensure complex datasets from Business Intelligence (BI) were accurately transmitted and consumed by target applications.",
+        "Cross-Functional Collaboration: Conducted end-to-end data verification in collaboration with internal Telkomsigma and Telkomsel teams to identify and resolve synchronization issues during the cloud transition phase.",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "Isolutions Indonesia",
+      position: "IT Staff",
+      startDate: "November 2023",
+      endDate: "November 2025",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        `Infrastructure & Network Management: Performed hardware installation and maintenance (PCs, Servers, Printers) and
+          redesigned physical network topology across multiple floors using MikroTik RB750R2 routers and switches to expand
+          broadcast domains.`,
+        
+        `System Administration: Implemented a zero-trust network solution utilizing Tailscale to provide secure remote access to
+          local enterprise servers without requiring a Public IP.`,
+
+        `Application Development & Support: Managed the end-to-end development lifecycle of 4 internal operational web
+          applications (Job Portal, Task Management, Project Documentation, and Event Registration) using the Laravel framework.`,
+
+        `Server Deployment: Handled web application deployments to Windows-based production servers (XAMPP) and external
+          hosting (Hostinger/cPanel) via SSH, including SMTP Email notification configurations and HTTPS security certificates via
+          Cloudflare.`,
+
+        `End-User Technical Support: Resolved daily technical incidents both remotely and on-site, including network issue
+          isolation (IP conflicts, Gateway errors), Windows & macOS optimization, and post-incident hardware replacement and
+          recovery.`
+
       ],
-    },
-    {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
+      name: "Azzahra System",
+      summary: "ERP system for school, for maintain financial and student database",
+      stackTechnology: ["Laravel", "Filament", "Postgre SQL"],
       linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
-    },
-    {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
-    },
-    {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
+      linkSource: "",
+      image: "/azzahra-system.png",
     },
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
-
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+    Hi, I’m an IT Operations & Support Specialist with a strong passion for maintaining robust infrastructure and building efficient digital solutions.
+    With over 2 years of hands-on experience in managing hardware, local networks, and providing technical support, I also bring added value through full-stack web development (Laravel) and enterprise-scale cloud migration testing (FUT).
+    I thrive at the intersection of reliable IT operations and modern web development.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/ahmad-big.png",
   },
 };
 

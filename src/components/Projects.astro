@@ -12,44 +12,65 @@ const { projects } = Astro.props;
 
 <Section text="Featured Projects" href="projects">
   {
-    projects.map(({ name, summary, image, linkPreview, linkSource }, index) => {
+    projects.map(({ name, summary, image, linkPreview, stackTechnology }, index) => {
       const top = 98 + index * 40;
       return (
         <div
           style={`top: ${top}px;`}
-          class="sticky mb-12 rounded-2xl border border-neutral/20 bg-black"
+          class="sticky mb-12 overflow-hidden rounded-2xl border border-neutral/20 bg-[#1c232d] group"
         >
-          <div class="bg-difu relative z-1 grid h-145 w-full grid-rows-2 rounded-2xl bg-[#1c232d]/85 before:absolute before:inset-0 before:z-[-1] before:rounded-2xl before:bg-[url(/raja.png)] before:bg-size-[128px] before:bg-repeat before:opacity-5 before:content-[''] sm:grid-cols-2 sm:grid-rows-1 md:h-96">
-            <div class="px-6 pt-12">
-              <h3 class="mb-5 font-serif text-3xl font-medium text-primary">
+          {/* Container Utama: Flex Column di Mobile, Relative di Desktop */}
+          <div class="relative flex w-full flex-col md:h-[500px] md:block">
+            
+            {/* Bagian Gambar */}
+            <div class="relative aspect-[16/10] w-full shrink-0 md:absolute md:inset-0 md:h-full">
+              <Image
+                class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                src={image}
+                alt={name}
+                width="1200"
+                height="675"
+              />
+              {/* Overlay Gelap HANYA muncul di Desktop */}
+              <div class="absolute inset-0 hidden bg-gradient-to-t from-black/95 via-black/60 to-transparent md:block"></div>
+            </div>
+
+            {/* Bagian Teks & Badge */}
+            <div class="relative z-10 flex flex-1 flex-col justify-end p-6 md:absolute md:inset-0 md:p-12">
+              
+              {/* Badge Stack Technology */}
+              {stackTechnology && stackTechnology.length > 0 && (
+                <div class="mb-4 flex flex-wrap gap-2">
+                  {stackTechnology.map((tech) => (
+                    <span class="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur-md">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <h3 class="mb-2 font-serif text-2xl font-bold text-white md:text-4xl">
                 {name}
               </h3>
-              <p class="text-base text-neutral">{summary}</p>
-              <div class="flex gap-5 pt-10 text-white">
-                <a
-                  href={linkSource}
-                  target="_blank"
-                  class="after:relative after:-bottom-1.25 after:content-[url(/external.svg)] hover:underline"
-                >
-                  Source
-                </a>
+              <p class="mb-6 max-w-2xl text-sm text-gray-400 md:text-base md:text-gray-300">
+                {summary}
+              </p>
+              
+              {/* Tombol "View Project" */}
+              <div>
                 <a
                   href={linkPreview}
                   target="_blank"
-                  class="after:relative after:-bottom-1.25 after:content-[url(/external.svg)] hover:underline"
+                  class="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
                 >
-                  Preview
+                  View Project
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
                 </a>
               </div>
-            </div>
-            <div class="flex items-end justify-end overflow-hidden">
-              <Image
-                class="h-full w-[95%] rounded-ss-xl rounded-ee-2xl object-none object-top-left sm:h-[85%] sm:w-full"
-                src={image}
-                alt={name}
-                width="736"
-                height="483"
-              />
             </div>
           </div>
         </div>
