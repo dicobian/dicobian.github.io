@@ -1,7 +1,7 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Ahmad Habib - Web & IT Support",
+  title: "Ahmad Habib - Web & IT Support test test",
   author: "Ahmad Habib",
   description:
     "Web Developer & IT Support Specialist based in Jakarta, Indonesia. I specialize in Laravel web app development and IT support.",
@@ -44,7 +44,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "Isolutions Indonesia",
-      position: "IT Staff",
+      position: "IT Staff & Software Developper",
       startDate: "November 2023",
       endDate: "November 2025",
       summary: [
@@ -103,6 +103,10 @@ export const SITE_CONTENT: SiteContent = {
     {
       name: "Basic Networking",
       image: "/certificates/cisco-networking.png"
+    },
+    {
+      name: "MTCNA",
+      image: "/certificates/mtcna.png"
     }
   ],
   about: {
